@@ -26,7 +26,8 @@ export function headers() {
   
     return {
       "Content-Type": "application/json",
-      "Authorization": `Bearer ${token}`
+      "Authorization": `Bearer ${token}`,
+      'X-Noroff-API-Key': '72735a77-9e47-4c8a-889b-3ae8bdfd8904'
     }
   }
   
@@ -37,15 +38,8 @@ export async function authFetch(url, options = {}) {
     })
   }
 
-/*
-function load(key) {
-    return localStorage.getItem(key); 
-}
-*/
 
-/*
-function isLoggedIn() {
+export function isLoggedIn() {
     const token = load("token"); 
     return !!token;
 }
-*/

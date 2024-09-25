@@ -1,1 +1,28 @@
-export async function updatePost(id, { title, body, tags, media }) {}
+//export async function updatePost(id, { title, body, tags, media }) {}
+
+import { API_SOCIAL_POSTS } from "../constants";
+import { authFetch } from "../auth/key";
+
+const method = "put";
+
+export async function updatePost(postData) {
+    if (!postData.id){
+        throw new Error("Update requires a post ID");
+    }
+    const updatePostURL = `${API_SOCIAL_POSTS}/${postData.id}`;
+
+    const response = await authFetch(updatePostURL, {
+        method,
+        body:JSON.stringify(postData)
+    })
+
+    if (response.ok) {
+        alert("Post updated successfully!");
+        window.location.href = "/index.html";
+    } else {
+        alert("Failed to update the post");
+    }
+
+    return await response.json();
+}
+
