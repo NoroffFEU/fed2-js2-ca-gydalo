@@ -9,6 +9,7 @@ export async function updatePost(postData) {
     if (!postData.id){
         throw new Error("Update requires a post ID");
     }
+
     const updatePostURL = `${API_SOCIAL_POSTS}/${postData.id}`;
 
     const response = await authFetch(updatePostURL, {
