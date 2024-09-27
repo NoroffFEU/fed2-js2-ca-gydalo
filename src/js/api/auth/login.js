@@ -5,6 +5,13 @@ import { API_AUTH_LOGIN } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 
 const method = "POST";
 
+/**
+ * Attempts to log the user in by sending their profile information to the API.
+ * If the login is successful, the token and profile data are saved to storage.
+ * The user is then redirected to the homepage.
+ * @param {object} profile 
+ * @throws {error} - Throws error if username or password is wrong or doesn't exist.
+ */
 export async function login(profile) {
     const loginURL = API_AUTH_LOGIN;
     const body = JSON.stringify(profile);

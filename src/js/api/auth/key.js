@@ -48,10 +48,10 @@ export function headers() {
   
 
   /**
-   * 
-   * @param {*} url 
-   * @param {*} options 
-   * @returns 
+   * Makes an authorized fetch request by adding auth headers.
+   * @param {string} url 
+   * @param {object} options 
+   * @returns {promise<Response}
    */
 export async function authFetch(url, options = {}) {
     return fetch(url, {
@@ -60,7 +60,10 @@ export async function authFetch(url, options = {}) {
     })
   }
 
-
+/**
+ * Checks if the user is logged in by checking if there is a token in the localStorage.
+ * @returns {boolean}
+ */
 export function isLoggedIn() {
     const token = load("token"); 
     return !!token;
