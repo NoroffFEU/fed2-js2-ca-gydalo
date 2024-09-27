@@ -23,6 +23,9 @@ export default async function router(pathname = window.location.pathname) {
     case "/fed2-js2-ca-gydalo/auth":
       await import("/fed2-js2-ca-gydalo/src/js/router/views/auth.js");
       break;
+      case "/fed2-js2-ca-gydalo/auth/index.html":
+        await import("/fed2-js2-ca-gydalo/src/js/router/views/auth.js");
+        break;
     case "/fed2-js2-ca-gydalo/auth/login":
       await import("/fed2-js2-ca-gydalo/src/js/router/views/login.js");
       break;
@@ -38,15 +41,27 @@ export default async function router(pathname = window.location.pathname) {
     case "/fed2-js2-ca-gydalo/post":
       await import("/fed2-js2-ca-gydalo/src/js/router/views/post.js");
       break;
+      case "/fed2-js2-ca-gydalo/post/index.html":
+        await import("/fed2-js2-ca-gydalo/src/js/router/views/post.js");
+        break;
     case "/fed2-js2-ca-gydalo/post/edit":
       await import("/fed2-js2-ca-gydalo/src/js/router/views/postEdit.js");
       break;
+      case "/fed2-js2-ca-gydalo/post/edit/index.html":
+        await import("/fed2-js2-ca-gydalo/src/js/router/views/postEdit.js");
+        break;
     case "/fed2-js2-ca-gydalo/post/create":
       await import("/fed2-js2-ca-gydalo/src/js/router/views/postCreate.js");
       break;
+      case "/fed2-js2-ca-gydalo/post/create/index.html":
+        await import("/fed2-js2-ca-gydalo/src/js/router/views/postCreate.js");
+        break;
     case "/fed2-js2-ca-gydalo/profile":
       await import("/fed2-js2-ca-gydalo/src/js/router/views/profile.js");
       break;
+      case "/fed2-js2-ca-gydalo/profile/index.html":
+        await import("/fed2-js2-ca-gydalo/src/js/router/views/profile.js");
+        break;
     default:
       await import("/fed2-js2-ca-gydalo/src/js/router/views/notFound.js");
   }
