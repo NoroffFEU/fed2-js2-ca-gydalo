@@ -1,4 +1,6 @@
-import { getPost } from "../../api/post";
+import { getPost } from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
+
+
 
 
 export function getPostIdFromUrl() {
