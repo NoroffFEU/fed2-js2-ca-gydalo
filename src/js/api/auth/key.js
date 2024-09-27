@@ -8,9 +8,10 @@ export function save(key, value) {
   }
   
 /**
- * 
+ * Takes the key parameter and retrieves the corresponding value from localStorage. If the key exists in the localStorage it will return a string. If the key does not 
+ * exist in localStorage, it will return null.
  * @param {string} key 
- * @returns 
+ * @returns {object|null}
  */
 export function load(key) {
     try {
@@ -20,6 +21,11 @@ export function load(key) {
       return null
     } 
   }
+
+/**
+ * Clears the key from localStorage.
+ * @param {string} key 
+ */
   
 export function remove(key) {
     localStorage.removeItem(key);
