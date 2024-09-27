@@ -1,5 +1,5 @@
-import { authGuard } from "../../utilities/authGuard";
-import { getPosts } from "../../api/post";
+import { authGuard } from "./src/js/utilities/authGuard";
+import { getPosts } from "./src/js/api/post";
 
 authGuard();
 
