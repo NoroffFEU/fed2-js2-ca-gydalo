@@ -2,7 +2,10 @@ import { getPost } from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
 
 
 
-
+/**
+ * Fetches the posts id from the URL.
+ * @returns {string|null} - Returns post id if it exists, otherwise returns null.
+ */
 export function getPostIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     const postId = params.get('id'); 
@@ -20,6 +23,10 @@ if (postId) {
         });
 } 
 
+/**
+ * Creates elements on the HTML page for the data form a single post. 
+ * @param {object} postData - The data object for a single post. 
+ */
 function renderPostData(postData) {
     const postContainer = document.getElementById('post-container');
 
