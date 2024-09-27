@@ -24,9 +24,13 @@ async function loadPosts() {
 
 
 
-    if (postList.length > 0) {
+    if (Array.isArray(postList) && postList.length > 0) {
         const last12Posts = getLast12Posts(postList); 
-        renderPostTemplates(last12Posts, postContainer); 
+
+        console.log("Last 12 posts:", last12Posts); 
+
+       
+        renderPostTemplates(last12Posts, postContainer);
     } else {
         postContainer.innerHTML = '<p>No posts found.</p>'; 
     }
