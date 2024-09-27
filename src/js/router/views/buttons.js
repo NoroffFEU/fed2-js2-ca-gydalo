@@ -3,6 +3,7 @@ import { getPostIdFromUrl } from "/fed2-js2-ca-gydalo/src/js/router/views/post.j
 import * as postMethods from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
 
 
+
 /* Create button only shows up when user is logged in */
 function renderCreateButton() {
     if (isLoggedIn()) {
