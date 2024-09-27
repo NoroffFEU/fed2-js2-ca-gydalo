@@ -9,7 +9,7 @@ export function save(key, value) {
   
 /**
  * 
- * @param {*} key 
+ * @param {string} key 
  * @returns 
  */
 export function load(key) {
