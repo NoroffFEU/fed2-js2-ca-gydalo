@@ -3,6 +3,7 @@ import { authGuard } from "/fed2-js2-ca-gydalo/src/js/utilities/authGuard.js";
 
 authGuard();
 
+// From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
 
 import { createPost } from "/fed2-js2-ca-gydalo/src/js/api/post/create.js";
 

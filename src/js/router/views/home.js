@@ -5,9 +5,9 @@ import { getPosts } from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
 authGuard();
 
 
-/**
- * I have used this for help many places in the assignment: https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
- */
+
+// I have used this for help many places in the assignment: https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
+
 
 /**
  * Fetches the posts and the container from the html page. 

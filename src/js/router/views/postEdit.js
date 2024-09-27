@@ -6,6 +6,10 @@ import { load } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
 
 authGuard();
 
+/**
+ * Fetches the id from the url if there is one. 
+ * @returns {string|null} - If id is found in the url it returns a string, otherwise null.
+ */
 function getPostIdFromUrl() {
     const params = new URLSearchParams(window.location.search);
     return params.get('id');
@@ -21,6 +25,9 @@ if (form) {
         alert("Post ID is missing!");
     }
 
+    /**
+     * Loads the post data into the form based on the id. 
+     */
     async function loadPostData() {
         try {
             const post = await getPost(postId);
@@ -67,6 +74,4 @@ if (form) {
             });
     });
 
-} else {
-    console.error("Edit post form not found");
 }

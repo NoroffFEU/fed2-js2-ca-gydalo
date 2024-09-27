@@ -7,6 +7,8 @@ export async function readProfiles(limit, page) {}
 import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
 import { API_SOCIAL_PROFILES } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 
+// From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
+
 /**
  * Fetches the profiles from the API.
  * @returns {Promise<Array} - A promise that resolves to an array of profiles from the API.

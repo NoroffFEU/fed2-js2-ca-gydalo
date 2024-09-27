@@ -4,6 +4,9 @@ import { register } from "/fed2-js2-ca-gydalo/src/js/api/auth/register.js";
 
 // From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
 
+/**
+ * Selects the registration form. Then prevents the default behavior when submitted. 
+ */
 export function setRegisterFormListener () {
     const form = document.querySelector("#registerForm");
 

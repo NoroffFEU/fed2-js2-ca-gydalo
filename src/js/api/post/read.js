@@ -1,13 +1,8 @@
-/*export async function readPost(id) {}
-
-export async function readPosts(limit = 12, page = 1, tag) {}
-
-export async function readPostsByUser(username, limit = 12, page = 1, tag) {} */
-
 
 import { API_SOCIAL_POSTS } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
 
+// From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
 
 /**
  * Fetches the posts from the API.

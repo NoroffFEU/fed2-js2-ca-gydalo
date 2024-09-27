@@ -3,7 +3,10 @@ import { login } from "/fed2-js2-ca-gydalo/src/js/api/auth/login.js";
 //export async function onLogin(event) {}
 // From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
 
-
+/**
+ * Selects the login form and adds an eventlistener to handle the login.
+ * When the form is sent it prevents default behavior.
+ */
 export function setLoginFormListener () {
     const form = document.querySelector("#loginForm");
 

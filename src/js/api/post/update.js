@@ -1,10 +1,8 @@
-//export async function updatePost(id, { title, body, tags, media }) {}
 
 import { API_SOCIAL_POSTS } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
 
-
-
+// From https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
 
 const method = "put";
 
