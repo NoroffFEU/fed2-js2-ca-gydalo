@@ -26,9 +26,15 @@ export default async function router(pathname = window.location.pathname) {
     case "/fed2-js2-ca-gydalo/auth/login":
       await import("/fed2-js2-ca-gydalo/src/js/router/views/login.js");
       break;
+      case "/fed2-js2-ca-gydalo/auth/login/index.html":
+        await import("/fed2-js2-ca-gydalo/src/js/router/views/login.js");
+        break;
     case "/fed2-js2-ca-gydalo/auth/register":
       await import("/fed2-js2-ca-gydalo/src/js/router/views/register.js");
       break;
+      case "/fed2-js2-ca-gydalo/auth/register/index.html":
+        await import("/fed2-js2-ca-gydalo/src/js/router/views/register.js");
+        break;
     case "/fed2-js2-ca-gydalo/post":
       await import("/fed2-js2-ca-gydalo/src/js/router/views/post.js");
       break;

@@ -2,7 +2,10 @@
 import { API_SOCIAL_POSTS } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
 
-
+/**
+ * Checks if user have authorization to create a post.
+ * If the user is logged in 
+ */
 const method = "POST";
 
 export async function createPost(postData) {

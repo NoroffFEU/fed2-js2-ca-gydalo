@@ -8,7 +8,11 @@
 }) {}
   */
 
-
+/**
+ * Using the information sent to make a new user in the API.
+ * If the registration is a success the user is redirected to the login page.
+ * @param {object} profile
+ */
 import { API_AUTH_REGISTER } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 
 const method = "post";
@@ -24,8 +28,6 @@ export async function register(profile) {
         method,
         body
     });
-
-    console.log('Response received', response);
 
     const result = await response.json();
     alert("You are now registered");
