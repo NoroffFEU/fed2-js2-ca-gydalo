@@ -4,9 +4,8 @@ export async function readProfile(username) {
 
 export async function readProfiles(limit, page) {}
 
-import { authFetch } from "../../api/auth/key";
-import { API_SOCIAL_PROFILES } from "../../api/constants";
-
+import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
+import { API_SOCIAL_PROFILES } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 
 
 export async function getProfiles() {

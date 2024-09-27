@@ -1,5 +1,5 @@
 // import { onCreatePost } from "../../ui/post/create";
-import { authGuard } from "../../utilities/authGuard"; 
+import { authGuard } from "/fed2-js2-ca-gydalo/src/js/utilities/authGuard.js"; 
 
 authGuard();
 
@@ -9,7 +9,7 @@ const form = document.forms.createPost;
 
 form.addEventListener("submit", onCreatePost);  */
 
-import { createPost } from "../../api/post/create";
+import { createPost } from "/fed2-js2-ca-gydalo/src/js/api/post/create.js";
 
 const form = document.querySelector("#createPost");
 

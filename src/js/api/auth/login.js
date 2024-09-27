@@ -1,7 +1,7 @@
 //export async function login({ email, password }) {}
 
-import * as storage from "./key.js";
-import { API_AUTH_LOGIN } from "../constants.js";
+import * as storage from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
+import { API_AUTH_LOGIN } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 
 const method = "POST";
 

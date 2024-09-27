@@ -9,7 +9,7 @@
   */
 
 
-import { API_AUTH_REGISTER } from "../constants";
+import { API_AUTH_REGISTER } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 
 const method = "post";
 

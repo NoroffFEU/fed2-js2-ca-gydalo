@@ -1,7 +1,8 @@
-import { authGuard } from "../../utilities/authGuard";
-import { getPost } from "../../api/post";
-import { updatePost } from "../../api/post";
-import { load } from "../../api/auth/key";
+import { authGuard } from "/fed2-js2-ca-gydalo/src/js/utilities/authGuard.js";
+import { getPost } from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
+import { updatePost } from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
+import { load } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
+
 
 authGuard();
 

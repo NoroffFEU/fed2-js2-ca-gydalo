@@ -1,4 +1,4 @@
-import { API_KEY } from "./constants";
+import { API_KEY } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 
 export function headers() {
   const headers = new Headers();
