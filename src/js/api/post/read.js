@@ -5,12 +5,13 @@ export async function readPosts(limit = 12, page = 1, tag) {}
 export async function readPostsByUser(username, limit = 12, page = 1, tag) {} */
 
 
-import { API_SOCIAL_POSTS_USER } from "../constants";
-import { authFetch } from "../auth/key";
+import { API_SOCIAL_POSTS } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
+import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
+
 
 
 export async function getPosts() {
-    const updatePostURL = `${API_SOCIAL_POSTS_USER}`;
+    const updatePostURL = `${API_SOCIAL_POSTS}`;
 
     try {
         const response = await authFetch(updatePostURL);
@@ -30,7 +31,7 @@ export async function getPost(id) {
         throw new Error("Get post requires a post ID");
     }
 
-    const getPostURL = `${API_SOCIAL_POSTS_USER}/${id}`;
+    const getPostURL = `${API_SOCIAL_POSTS}/${id}`;
     console.log("Fetching post from:", getPostURL);
 
     const response = await authFetch(getPostURL, {
