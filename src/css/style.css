@@ -1,1 +1,6 @@
 @import url(_reset.css);
+
+
+img {
+    width: 200px;
+}
