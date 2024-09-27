@@ -32,7 +32,10 @@ export function remove(key) {
   }
 
 
-  // Auth key
+/**
+ * Loads the token and fetches the login/ authorization information. 
+ * @returns {object}
+ */
 export function headers() {
     const token = load("token");
   
@@ -43,6 +46,13 @@ export function headers() {
     }
   }
   
+
+  /**
+   * 
+   * @param {*} url 
+   * @param {*} options 
+   * @returns 
+   */
 export async function authFetch(url, options = {}) {
     return fetch(url, {
       ...options,
