@@ -1,4 +1,4 @@
-import { authGuard } from "/fed2-js2-ca-gydalo/src/js/utilities/authGuard.js";
+import { authGuard } from "../src/js/utilities/authGuard.js";
 import { getPosts } from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
 
 
