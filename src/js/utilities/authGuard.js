@@ -5,3 +5,4 @@ export function authGuard() {
   }
 }
 
+console.log('test')
