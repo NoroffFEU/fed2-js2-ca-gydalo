@@ -1,6 +1,7 @@
 // This function controls which JavaScript file is loaded on which page
 // In order to add additional pages, you will need to implement them below
 // You may change the behaviour or approach of this file if you choose
+console.log("Current pathname:", pathname);
 export default async function router(pathname = window.location.pathname) {
   switch (pathname) {
     case "/fed2-js2-ca-gydalo/":
