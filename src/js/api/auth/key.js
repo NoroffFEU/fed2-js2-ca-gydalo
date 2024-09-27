@@ -1,10 +1,17 @@
 // export async function getKey(name) {}
 
-// Auth key save in storage
+/**
+ * Save auth key in storage.
+ * **/
 export function save(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
   }
   
+/**
+ * 
+ * @param {*} key 
+ * @returns 
+ */
 export function load(key) {
     try {
       const value = localStorage.getItem(key);
