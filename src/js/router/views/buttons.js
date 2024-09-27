@@ -67,7 +67,7 @@ function renderEditButton() {
             const button = document.createElement("button");
             button.innerText = "Edit Post";
             button.addEventListener("click", () => {
-                window.location.href = `/fed2-js2-ca-gydalo/post/index.html?id=${id}`;
+                window.location.href = `/fed2-js2-ca-gydalo/post/edit/index.html?id=${id}`;
             });
             container.appendChild(button);
         }

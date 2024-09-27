@@ -2,14 +2,17 @@ import { authGuard } from "/fed2-js2-ca-gydalo/src/js/utilities/authGuard.js";
 import { getPosts } from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
 
 
-
-https://norofffeu.github.io/fed2-js2-ca-gydalo/src/js/router/views/fed2-js2-ca-gydalo/src/js/utilities/authGuard.js
-
 authGuard();
 
-// https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
 
+/**
+ * I have used this for help many places in the assignment: https://www.youtube.com/watch?v=rLAGHFr8bvU&t=2306s
+ */
 
+/**
+ * Fetches the posts and the container from the html page. 
+ * Then lists the posts on the homepage.
+ */
 async function loadPosts() {
     const postContainer = document.getElementById('post-container');
     
@@ -19,11 +22,19 @@ async function loadPosts() {
 
     const postList = posts.data || posts;
 
+
+
     if (postList.length > 0) {
+        const last12Posts = getLast12Posts(postList); 
+        renderPostTemplates(last12Posts, postContainer); 
         renderPostTemplates(postList, postContainer); 
     } else {
         postContainer.innerHTML = '<p>No posts found.</p>'; 
     }
+}
+
+function getLast12Posts(posts) {
+    return posts.slice(-12);
 }
 
 document.addEventListener("DOMContentLoaded", loadPosts);
