@@ -59,7 +59,7 @@ if (form) {
             .then(response => {
                 console.log("Post updated successfully:", response);
                 alert("Post updated successfully!");
-                window.location.href = "/index.html";
+                window.location.href = "/fed2-js2-ca-gydalo/index.html";
             })
             .catch(error => {
                 console.error("Error updating post:", error);

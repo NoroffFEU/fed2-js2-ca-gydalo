@@ -28,5 +28,3 @@ export async function getProfiles() {
   
     return await response.json();
   }
-
-console.log('hei')

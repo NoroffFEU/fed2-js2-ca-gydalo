@@ -29,7 +29,7 @@ export async function login(profile) {
 
     alert("You are now logged in");
 
-    window.location.href = "/index.html";
+    window.location.href = "/fed2-js2-ca-gydalo/index.html";
 } catch (error) {
     alert("Wrong username or password");
 }

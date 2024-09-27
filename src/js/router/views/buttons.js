@@ -13,7 +13,7 @@ function renderCreateButton() {
             const button = document.createElement("button");
             button.innerText = "Create new Post";
             button.addEventListener("click", () => {
-                window.location.href = `/post/create/index.html`;
+                window.location.href = `/fed2-js2-ca-gydalo/post/create/index.html`;
             });
             
             container.appendChild(button);
@@ -25,7 +25,7 @@ renderCreateButton();
 
 
 function renderRemoveButton() {
-    if (window.location.pathname === "/post/index.html" && isLoggedIn()) {
+    if (window.location.pathname === "/fed2-js2-ca-gydalo/post/index.html" && isLoggedIn()) {
         const container = document.querySelector("#deleteButton");
         const id = getPostIdFromUrl(); 
 
@@ -52,7 +52,7 @@ function renderRemoveButton() {
 renderRemoveButton(); 
 
 function renderEditButton() {
-    if (window.location.pathname === "/post/index.html" && isLoggedIn()) {
+    if (window.location.pathname === "/fed2-js2-ca-gydalo/post/index.html" && isLoggedIn()) {
         const container = document.querySelector("#editButton");
         const id = getPostIdFromUrl(); 
 
@@ -60,7 +60,7 @@ function renderEditButton() {
             const button = document.createElement("button");
             button.innerText = "Edit Post";
             button.addEventListener("click", () => {
-                window.location.href = `/post/edit/index.html?id=${id}`;
+                window.location.href = `/fed2-js2-ca-gydalo/post/index.html?id=${id}`;
             });
             container.appendChild(button);
         }
@@ -82,7 +82,7 @@ function logOut() {
             localStorage.clear();
 
             alert("You are now logged out");
-            window.location.href = "/index.html";
+            window.location.href = "/fed2-js2-ca-gydalo/index.html";
         });
 
         container.appendChild(button);
@@ -104,7 +104,7 @@ function loginButtonNotLoggedIn() {
             const buttonLogin = document.createElement("button");
             buttonLogin.innerText = "Login";
             buttonLogin.addEventListener("click", () => {
-                window.location.href = `/auth/login.html`;
+                window.location.href = `/fed2-js2-ca-gydalo/auth/login/index.html`;
 
             });
             container.appendChild(buttonLogin);
@@ -124,7 +124,7 @@ function registerButtonNotLoggedIn() {
             const buttonRegister = document.createElement("button");
             buttonRegister.innerText = "Register";
             buttonRegister.addEventListener("click", () => {
-                window.location.href = `/auth/register.html`;
+                window.location.href = `/fed2-js2-ca-gydalo/auth/register/index.html`;
 
             });
             container.appendChild(buttonRegister);

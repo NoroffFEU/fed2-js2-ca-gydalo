@@ -47,7 +47,7 @@ export function postTemplate(postData) {
 
 
     post.addEventListener("click", () => {
-        const targetUrl = `/post/index.html?id=${postData.id}`;
+        const targetUrl = `/fed2-js2-ca-gydalo/post/index.html?id=${postData.id}`;
         console.log(`Navigating to: ${targetUrl}`);
         window.location.href = targetUrl;
     });

@@ -22,7 +22,7 @@ export async function updatePost(postData) {
 
     if (response.ok) {
         alert("Post updated successfully!");
-        window.location.href = "/index.html";
+        window.location.href = "/fed2-js2-ca-gydalo/index.html";
     } else {
         alert("Failed to update the post");
     }
