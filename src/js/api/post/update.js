@@ -8,6 +8,11 @@ import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
 
 const method = "put";
 
+/**
+ * 
+ * @param {*} postData 
+ * @returns 
+ */
 export async function updatePost(postData) {
     if (!postData.id){
         throw new Error("Update requires a post ID");

@@ -9,7 +9,10 @@ import { API_SOCIAL_POSTS } from "/fed2-js2-ca-gydalo/src/js/api/constants.js";
 import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
 
 
-
+/**
+ * Fetches the posts from the API.
+ * @throws {error}
+ */
 export async function getPosts() {
     const updatePostURL = `${API_SOCIAL_POSTS}`;
 
@@ -26,6 +29,10 @@ export async function getPosts() {
     }
 }
 
+/**
+ * Fetches a single post from the API based on the id of the post.
+ * @throws {error}
+ */
 export async function getPost(id) {
     if (!id){
         throw new Error("Get post requires a post ID");

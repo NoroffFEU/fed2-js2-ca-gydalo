@@ -8,6 +8,11 @@ import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
 
 const method = "delete";
 
+/**
+ * Fetches the id of a post and removes the post.
+ * Sends a delete request to the API and, upon success, redirects the user to the homepage.
+ * @param {string|number} id 
+ */
 export async function removePost(id) {
     if (!id){
         throw new Error("Delete requires a post ID");
@@ -19,7 +24,6 @@ export async function removePost(id) {
         method
     })
 
-    
     alert("You have deleted the post");
 
     window.location.href = "/fed2-js2-ca-gydalo/index.html";
