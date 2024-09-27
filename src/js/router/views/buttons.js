@@ -1,6 +1,7 @@
-import { isLoggedIn } from "../../api/auth/key";
-import { getPostIdFromUrl } from "./post";
-import * as postMethods from "../../api/post/index";
+import { isLoggedIn } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
+import { getPostIdFromUrl } from "/fed2-js2-ca-gydalo/src/js/router/views/post.js";
+import * as postMethods from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
+
 
 /* Create button only shows up when user is logged in */
 function renderCreateButton() {
