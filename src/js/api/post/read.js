@@ -31,7 +31,6 @@ export async function getPosts() {
 
 /**
  * Fetches a single post from the API based on the id of the post.
- * @throws {error}
  */
 export async function getPost(id) {
     if (!id){

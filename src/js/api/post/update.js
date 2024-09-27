@@ -9,9 +9,12 @@ import { authFetch } from "/fed2-js2-ca-gydalo/src/js/api/auth/key.js";
 const method = "put";
 
 /**
- * 
- * @param {*} postData 
- * @returns 
+ * Fetches the id of the post.
+ * Checks if user is logged in.
+ * If logged in - sends the updated post data to the API using the PUT method.
+ * @param {object} postData - An object containing the updated post data.
+ * @returns {Promise<object} - A promise that resolves to the updated post data from the API.
+ * @throws {Error} - Throws an error if no post ID is provided or if the update request fails.
  */
 export async function updatePost(postData) {
     if (!postData.id){

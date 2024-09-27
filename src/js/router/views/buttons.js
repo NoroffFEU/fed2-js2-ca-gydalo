@@ -4,7 +4,9 @@ import * as postMethods from "/fed2-js2-ca-gydalo/src/js/api/post/index.js";
 
 
 
-/* Create button only shows up when user is logged in */
+/**
+ * Creates a button for creating a new post if the user is logged in. If the user is not logged in, the button will not appear.
+ */
 function renderCreateButton() {
     if (isLoggedIn()) {
         const container = document.querySelector("#createButton");
@@ -23,7 +25,9 @@ function renderCreateButton() {
 
 renderCreateButton();
 
-
+/**
+ * Creates a button for removing a post if the user is logged in. If the user is not logged in, the button will not appear.
+ */
 function renderRemoveButton() {
     if (window.location.pathname === "/fed2-js2-ca-gydalo/post/index.html" && isLoggedIn()) {
         const container = document.querySelector("#deleteButton");
@@ -51,6 +55,9 @@ function renderRemoveButton() {
 
 renderRemoveButton(); 
 
+/**
+ * Creates a button for updating a post if the user is logged in. If the user is not logged in, the button will not appear.
+ */
 function renderEditButton() {
     if (window.location.pathname === "/fed2-js2-ca-gydalo/post/index.html" && isLoggedIn()) {
         const container = document.querySelector("#editButton");
@@ -70,7 +77,9 @@ function renderEditButton() {
 
 renderEditButton(); 
 
-
+/**
+ * Creates a button for logout if the user is logged in. If the user is not logged in, the button will not appear.
+ */
 function logOut() {
     if (isLoggedIn()) {
         const container = document.querySelector("#logOutButton");
@@ -94,7 +103,9 @@ function logOut() {
 logOut();
 
 
-
+/**
+ * Creates a button for login if the user is not logged in. If the user is logged in, the button will not appear.
+ */
 function loginButtonNotLoggedIn() {
     if (isLoggedIn()) {
     } else {
@@ -115,6 +126,9 @@ function loginButtonNotLoggedIn() {
 
 loginButtonNotLoggedIn();
 
+/**
+ * Creates a button for register if the user is not logged in. If the user is logged in, the button will not appear.
+ */
 function registerButtonNotLoggedIn() {
     if (isLoggedIn()) {
     } else {
