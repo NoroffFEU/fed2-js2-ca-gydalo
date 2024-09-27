@@ -11,7 +11,7 @@ authGuard();
 
 /**
  * Fetches the posts and the container from the html page. 
- * Then lists the posts on the homepage.
+ * Then lists the 12 latest posts on the homepage.
  */
 async function loadPosts() {
     const postContainer = document.getElementById('post-container');
@@ -27,22 +27,38 @@ async function loadPosts() {
     if (postList.length > 0) {
         const last12Posts = getLast12Posts(postList); 
         renderPostTemplates(last12Posts, postContainer); 
-        renderPostTemplates(postList, postContainer); 
     } else {
         postContainer.innerHTML = '<p>No posts found.</p>'; 
     }
 }
 
+/**
+ * Function to filter the last 12 posts.
+ * @param {Array} posts - Array of posts to filter.
+ * @returns {Array} - Array containing the last 12 posts.
+ */
 function getLast12Posts(posts) {
     return posts.slice(-12);
 }
 
 document.addEventListener("DOMContentLoaded", loadPosts);
 
+/**
+ * Makes a post template in string form.
+ * @param {object} postData - Data for a single post
+ * @returns {string} - HTML string for the post.
+ */
 export function postTemplateA(postData) {
     return `<div class="post" id=${postData.id}>${postData.title}</div>`;
 }
 
+/**
+ * Makes an HTML element containing postdata. 
+ * If there is an image link it will also include this and show it on the page.
+ * If u click the post u will be redirected to the post page. 
+ * @param {object} postData - Data for the post.
+ * @returns 
+ */
 export function postTemplate(postData) {
     const post = document.createElement("div");
     post.classList.add("post");
@@ -55,8 +71,6 @@ export function postTemplate(postData) {
         post.append(img);
     }
 
-
-
     post.addEventListener("click", () => {
         const targetUrl = `/fed2-js2-ca-gydalo/post/index.html?id=${postData.id}`;
         console.log(`Navigating to: ${targetUrl}`);
@@ -66,10 +80,18 @@ export function postTemplate(postData) {
     return post;
 }
 
+/**
+ * Appends a single post to the parent container using the post template.
+ * @param {object} postData - Data for one post.
+ */
 export function renderPostTemplate(postData, parent) {
     parent.append(postTemplate(postData));
 }
 
+/**
+ * Appends multiple posts to the parent container using the post template.
+ * @param {array} postDataList - List of post data.
+ */
 export function renderPostTemplates(postDataList, parent) {
     parent.append(...postDataList.map(postTemplate));
 }
