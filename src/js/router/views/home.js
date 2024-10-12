@@ -25,7 +25,9 @@ async function loadPosts() {
 
 
     if (Array.isArray(postList) && postList.length > 0) {
-        const last12Posts = getLast12Posts(postList); 
+        const sortedPosts = postList.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        
+        const last12Posts = getLast12Posts(sortedPosts); 
 
         console.log("Last 12 posts:", last12Posts); 
 
@@ -42,7 +44,7 @@ async function loadPosts() {
  * @returns {Array} - Array containing the last 12 posts.
  */
 function getLast12Posts(posts) {
-    return posts.slice(-12);
+    return posts.slice(0, 12);
 }
 
 document.addEventListener("DOMContentLoaded", loadPosts);
