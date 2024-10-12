@@ -5,14 +5,20 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
+    <script type="module" src="/fed2-js2-ca-gydalo/src/app.js"></script>
   </head>
 
   <body>
+    <div class="logOutButton"></div>
     <h1>Edit Post</h1>
 
-    <form name="editPost">
-      <button>Edit Post</button>
-    </form>
+    <form id="editPost" name="editPost">
+      <input type="text" name="title" placeholder="Title" required maxlength="100">
+      <textarea name="body" placeholder="Blog post text..." required> </textarea>
+      <input type="url" name="mediaURL" placeholder="Image URL">
+      <input type="text" name="mediaALT" placeholder="Image Alt Text">
+
+    <button type="submit">Edit Post</button>
+  </form>
   </body>
 </html>

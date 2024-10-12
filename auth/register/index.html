@@ -5,13 +5,14 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noroff FED2 JS2 CA</title>
-    <script type="module" src="/src/app.js"></script>
+    <base href="/fed2-js2-ca-gydalo/">
+    <script type="module" src="/fed2-js2-ca-gydalo/src/app.js"></script>
   </head>
 
   <body>
     <h1>Register</h1>
 
-    <form name="register">
+    <form name="register" id="registerForm" method="post">
       <div>
         <label for="name">Name</label>
         <input
@@ -48,7 +49,7 @@
         />
       </div>
 
-      <a href="/auth/login/">Login</a>
+      <a href="/fed2-js2-ca-gydalo/auth/login/">Login</a>
       <button>Register</button>
     </form>
   </body>
