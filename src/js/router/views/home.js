@@ -68,11 +68,14 @@ export function postTemplateA(postData) {
 export function postTemplate(postData) {
     const post = document.createElement("div");
     post.classList.add("post");
+
+    const postTitle = document.createElement('h1');
+    postTitle.textContent = postData.title;
     postTitle.classList.add(
         "font-h2",
         "pb-5"
     );
-    post.innerText = postData.title;
+    post.append(postTitle);
 
     if (postData.media) {
         const img = document.createElement('img');
