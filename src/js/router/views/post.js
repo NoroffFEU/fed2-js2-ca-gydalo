@@ -50,17 +50,6 @@ function renderPostData(postData) {
         "font-p"
     );
 
-    const postImage = document.createElement('img');
-    postImage.setAttribute("src", postData.media.url);
-    postImage.alt = `Image from ${postData.title}`;
-    postImage.classList.add(
-        "pt-20",
-        "pb-10",
-        "max-w-4xl",
-        "max-h-screen"
-
-    );
-
     const postAuthor = document.createElement('p');
     postAuthor.textContent = `Author: ${postData.author}`;
     postAuthor.classList.add(
@@ -76,12 +65,22 @@ function renderPostData(postData) {
         "pb-10"
     );
 
-    if (postData.media) {
+    if (postData.media && postData.media.url) {
+        const postImage = document.createElement('img');
+        postImage.setAttribute("src", postData.media.url);
+        postImage.alt = `Image from ${postData.title}`;
+        postImage.classList.add(
+            "pt-20",
+            "pb-10",
+            "max-w-4xl",
+            "max-h-screen"
+        );
         postContainer.appendChild(postImage);
+        }
+    
+        postContainer.appendChild(postTitle);
+        postContainer.appendChild(postBody);
+        postContainer.appendChild(postAuthor);
+        postContainer.appendChild(postDate);
     }
-
-    postContainer.appendChild(postTitle);
-    postContainer.appendChild(postBody);
-    postContainer.appendChild(postAuthor);
-    postContainer.appendChild(postDate);
-}
+    
