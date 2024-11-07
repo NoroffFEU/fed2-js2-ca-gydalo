@@ -7,21 +7,50 @@
     <title>Noroff FED2 JS2 CA</title>
     <base href="/fed2-js2-ca-gydalo/">
     <script type="module" src="/fed2-js2-ca-gydalo/src/app.js"></script>
+    <script type="module" defer src="/src/js/router/views/buttons.js"></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inspiration&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <h1>Login</h1>
-    <form name="login" id="loginForm" method="post">
-      <div>
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required />
+  <body class="flex flex-col min-h-screen">
+    <header class="bg-green flex justify-between items-center p-2">
+      <div class=" flex-1">
+        <a href="/index.html" class="font-heading text-lg">PicTales</a>
       </div>
+      <div class="flex space-x-4">
+      <a class="hover:text-customGray font-p text-xs" href="/profile/index.html">My Profile</a>
+      <div id="logOutButton" class="pl-2 hover:text-customGray font-p text-xs px-2"></div>
+      </div>
+    </header>
+    <main class="flex-grow flex items-center justify-center flex-col">
+    <div class="bg-green p-10 xl:p-20 flex items-center justify-center flex-col max-w-3xl w-full mx-auto">
+      <div>
+    <h1 class="font-heading text-lg pb-8">PicTales</h1>
+  </div>
+  <div>
+    <h2 class="font-h2 pb-4">Login</h2>
+  </div>
 
-      <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" required />
+  <div class="pt-5">
+    <form id="loginForm" name="login">
+      <div class="p-1 flex justify-center w-full">
+        <input placeholder="Email" id="email" type="email" name="email" required class="p-1"/>
       </div>
-      <a href="/fed2-js2-ca-gydalo/auth/register/">Register</a>
-      <button>Login</button>
-    </form>
+      <div class="flex md:flex-row flex-col">
+      <div class="p-1">
+        <input placeholder="Password" type="password" name="password" id="password" class="p-1" required />
+      </div>
+    </div>
+  </div>
+<div class="pb-5">
+  <a href="/auth/register/" class="font-p text-xs">Register</a>
+</div>
+      <button type="submit" class="py-2 px-5 bg-button rounded font-button hover:bg-buttonHover">Login</button>
+</form>
+</main>
+  <footer class="bg-green p-4 mt-auto">
+    Copyright
+    </footer>
   </body>
 </html>
