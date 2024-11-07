@@ -37,27 +37,51 @@ function renderPostData(postData) {
 
     const postTitle = document.createElement('h2');
     postTitle.textContent = postData.title;
+    postTitle.classList.add(
+        "font-h2",
+        "pb-10",
+        "text-lg"
+    );
 
     const postBody = document.createElement('p');
     postBody.textContent = postData.body;
+    postBody.classList.add(
+        "pb-10",
+        "font-p"
+    );
 
     const postImage = document.createElement('img');
     postImage.setAttribute("src", postData.media.url);
     postImage.alt = `Image from ${postData.title}`;
+    postImage.classList.add(
+        "pt-20",
+        "pb-10",
+        "max-w-4xl",
+        "max-h-screen"
+
+    );
 
     const postAuthor = document.createElement('p');
     postAuthor.textContent = `Author: ${postData.author}`;
+    postAuthor.classList.add(
+        "font-p",
+        "text-tiny"
+    );
 
     const postDate = document.createElement('p');
     postDate.textContent = `Created on: ${new Date(postData.created).toLocaleDateString()}`;
-
-    postContainer.appendChild(postTitle);
-    postContainer.appendChild(postBody);
+    postDate.classList.add(
+        "font-p",
+        "text-tiny",
+        "pb-10"
+    );
 
     if (postData.media) {
         postContainer.appendChild(postImage);
     }
+
+    postContainer.appendChild(postTitle);
+    postContainer.appendChild(postBody);
     postContainer.appendChild(postAuthor);
     postContainer.appendChild(postDate);
 }
-
