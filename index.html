@@ -10,19 +10,33 @@
   <script type="module" src="/fed2-js2-ca-gydalo/src/app.js"></script>
   <script type="module" src="/fed2-js2-ca-gydalo/src/js/router/views/home.js"></script>
   <script type="module" src="/fed2-js2-ca-gydalo/src/js/router/views/buttons.js"></script>
+  <link rel="stylesheet" href="/fed2-js2-ca-gydalo/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inspiration&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
 </head>
-<body>
-  <img src="./public/images/noroff-logo.png" alt="Noroff Logo" />
-
-  <h1>Home</h1>
-
-  <a href="/fed2-js2-ca-gydalo/profile/index.html">My Profile</a>
-  <a href="/fed2-js2-ca-gydalo/auth/login/index.html">Login</a>
-  <a href="/fed2-js2-ca-gydalo/auth/register/index.html">Register</a>
-    <div id="logOutButton"></div>
-  <div class="create-button" id="createButton"></div>
+<body class="bg-background">
+  <header class="bg-green flex justify-between items-center p-2">
+    <div class=" flex-1">
+      <a href="/fed2-js2-ca-gydalo/index.html" class="font-heading text-lg">PicTales</a>
+    </div>
+    <div class="flex space-x-4">
+    <a href="/fed2-js2-ca-gydalo/profile/index.html" class="hover:text-customGray font-p text-xs">My Profile</a>
+    <a href="/fed2-js2-ca-gydalo/auth/login/index.html" class="pl-2 hover:text-customGray font-p text-xs">Login</a>
+    <a href="/fed2-js2-ca-gydalo/auth/register.html" class="pl-2 hover:text-customGray font-p text-xs">Register</a>
+    <div id="logOutButton" class="pl-2 hover:text-customGray font-p text-xs"></div>
+    </div>
+  </header>
+  <div class="m-10">
+  <div class="pt-5">
+    <h1 class="text-center font-heading text-xl">PicTales</h1>
   </div>
-  <div id="post-container"></div>
+  <div class="create-button text-center p-16" id="createButton"></div>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-4 mx-auto max-w-5xl place-items-center text-center pb-20" id="post-container"></div>
+</div>
+<footer class="bg-green">
+Copyright
+</footer>
 </body>
 </html>
-
