@@ -14,6 +14,14 @@ function renderCreateButton() {
         if (container) { 
             const button = document.createElement("button");
             button.innerText = "Create new Post";
+            button.classList.add(
+                "py-2",
+                "px-4",
+                "bg-button",
+                "rounded",
+                "font-button",
+                "hover:bg-buttonHover"
+            )
             button.addEventListener("click", () => {
                 window.location.href = `/fed2-js2-ca-gydalo/post/create/index.html`;
             });
@@ -36,6 +44,14 @@ function renderRemoveButton() {
         if (container, id) { 
             const button = document.createElement("button");
             button.innerText = "Delete Post";
+            button.classList.add(
+                "py-2",
+                "px-4",
+                "bg-button",
+                "rounded",
+                "font-button",
+                "hover:bg-buttonHover"
+            )
             button.addEventListener("click", () => {
                 postMethods.removePost(id);
             });
@@ -66,6 +82,14 @@ function renderEditButton() {
         if (container, id) { 
             const button = document.createElement("button");
             button.innerText = "Edit Post";
+            button.classList.add(
+                "py-2",
+                "px-4",
+                "bg-button",
+                "rounded",
+                "font-button",
+                "hover:bg-buttonHover"
+            )
             button.addEventListener("click", () => {
                 window.location.href = `/fed2-js2-ca-gydalo/post/edit/index.html?id=${id}`;
             });

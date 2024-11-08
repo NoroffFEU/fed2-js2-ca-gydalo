@@ -68,20 +68,64 @@ export function postTemplateA(postData) {
 export function postTemplate(postData) {
     const post = document.createElement("div");
     post.classList.add("post");
-    post.innerText = postData.title;
+
+    const postTitle = document.createElement('h1');
+    postTitle.textContent = postData.title;
+    postTitle.classList.add(
+        "font-h2",
+        "pb-5"
+    );
+    post.append(postTitle);
 
     if (postData.media) {
         const img = document.createElement('img');
         img.setAttribute("src", postData.media.url);
         img.alt = `Image from ${postData.title}`;
-        post.append(img);
-    }
+        img.classList.add(
+            "size-80",
+            "object-cover",
+            "hover:cursor-pointer",
+            "hover:opacity-60"
+        )
+        post.append(img); 
 
+    } else {
+          const postImgPlaceholder = document.createElement('img');
+          postImgPlaceholder.setAttribute("src", "https://i.postimg.cc/JzqHnfnV/Skjermbilde-11.png");
+          postImgPlaceholder.alt = `Image not provided`;
+          postImgPlaceholder.classList.add(
+              "size-80",
+              "object-cover",
+              "hover:cursor-pointer",
+              "hover:opacity-60"
+          );
+  
+          post.append(postImgPlaceholder);
+  
+      }
     post.addEventListener("click", () => {
         const targetUrl = `/fed2-js2-ca-gydalo/post/index.html?id=${postData.id}`;
         console.log(`Navigating to: ${targetUrl}`);
         window.location.href = targetUrl;
     });
+
+    const postAuthor = document.createElement('p');
+    postAuthor.textContent = `Author: ${postData.author}`;
+    postAuthor.classList.add(
+        "text-tiny",
+        "font-p",
+        "pt-5"
+    );
+    post.append(postAuthor);
+
+    const postDate = document.createElement('p');
+    postDate.textContent = `Created on: ${new Date(postData.created).toLocaleDateString()} at ${new Date(postData.created).toLocaleTimeString()}`;
+    postDate.classList.add(
+        "text-tiny",
+        "font-p",
+        "pb-10"
+    );
+    post.append(postDate);
 
     return post;
 }

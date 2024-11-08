@@ -7,15 +7,39 @@
     <title>Noroff FED2 JS2 CA</title>
     <base href="/fed2-js2-ca-gydalo/">
     <script type="module" src="/fed2-js2-ca-gydalo/src/app.js"></script>
+    <script type="module" defer src="/fed2-js2-ca-gydalo/src/js/router/views/buttons.js"></script>
+    <link rel="stylesheet" href="/fed2-js2-ca-gydalo/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inspiration&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
   </head>
 
-  <body>
-    <h1>Register</h1>
+  <body class="flex flex-col min-h-screen">
+    <header class="bg-green flex justify-between items-center p-2">
+      <div class=" flex-1">
+        <a href="/fed2-js2-ca-gydalo/index.html" class="font-heading text-lg">PicTales</a>
+      </div>
+      <div class="flex space-x-4">
+      <a class="hover:text-customGray font-p text-xs" href="/fed2-js2-ca-gydalo/profile/index.html">My Profile</a>
+      <div id="logOutButton" class="pl-2 hover:text-customGray font-p text-xs px-2"></div>
+      </div>
+    </header>
+    <main class="flex-grow flex items-center justify-center flex-col">
+      <div class="bg-green p-10 flex items-center justify-center flex-col max-w-3xl w-full mx-auto">
+        <div>
+      <h1 class="font-heading text-lg pb-8">PicTales</h1>
+    </div>
+    <div>
+      <h2 class="font-h2 pb-4">Register</h2>
+    </div>
 
+
+    <div class="pt-5">
     <form name="register" id="registerForm" method="post">
-      <div>
-        <label for="name">Name</label>
+      <div class="p-1 flex justify-center w-full">
         <input
+        class="p-1"
+        placeholder="Name"
           id="name"
           type="text"
           name="name"
@@ -25,10 +49,11 @@
           title="Please enter a username using only letters and numbers"
         />
       </div>
-
-      <div>
-        <label for="email">Email</label>
+      <div class="flex md:flex-row flex-col">
+        <div class="p-1">
         <input
+        class="p-1"
+        placeholder="Email"
           id="email"
           type="email"
           name="email"
@@ -37,10 +62,12 @@
           title="Please enter a valid noroff.no or stud.noroff.no address"
         />
       </div>
-
-      <div>
-        <label for="password">Password</label>
+    </div>
+      <div class="flex md:flex-row flex-col">
+      <div class="p-1">
         <input
+        class="p-1"
+        placeholder="Password"
           type="password"
           name="password"
           id="password"
@@ -48,9 +75,16 @@
           minlength="8"
         />
       </div>
-
-      <a href="/fed2-js2-ca-gydalo/auth/login/">Login</a>
-      <button>Register</button>
-    </form>
+  </div>
+  </div>
+<div class="pb-5">
+  <a href="/fed2-js2-ca-gydalo/auth/login/index.html" class="font-p text-xs">Login</a>
+</div>
+      <button type="submit" class="py-2 px-5 bg-button rounded font-button hover:bg-buttonHover">Register</button>
+</form>
+</main>
+  <footer class="bg-green p-4 mt-auto">
+    Copyright
+    </footer>
   </body>
 </html>
